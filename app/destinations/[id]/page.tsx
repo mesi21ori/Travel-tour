@@ -4,17 +4,7 @@ import { notFound } from "next/navigation"
 import { MapPin, Calendar, Star, ArrowLeft } from "lucide-react"
 import { destinations } from "@/data/destinations"
 import { Button } from "@/components/ui/button"
-import dynamic from "next/dynamic"
-
-// Dynamically import the DestinationMap component with SSR disabled
-const DestinationMap = dynamic(() => import("@/components/destination-map"), {
-  ssr: false,
-  loading: () => (
-    <div className="flex h-[400px] items-center justify-center rounded-xl overflow-hidden bg-gray-100">
-      <p>Loading map...</p>
-    </div>
-  ),
-})
+import DestinationMapClient from "@/components/destination-map-client"
 
 export default function DestinationPage({ params }: { params: { id: string } }) {
   const destination = destinations.find((d) => d.id === params.id)
@@ -24,7 +14,7 @@ export default function DestinationPage({ params }: { params: { id: string } }) 
   }
 
   return (
-    <main className="container mx-auto px-4 py-8 mt-12">
+    <main className="container mx-auto px-4 py-8">
       <Link href="/destinations" className="mb-6 inline-flex items-center text-green-600 hover:underline">
         <ArrowLeft className="mr-2 h-4 w-4" />
         Back to destinations
@@ -90,7 +80,7 @@ export default function DestinationPage({ params }: { params: { id: string } }) 
       <div className="mb-8">
         <h2 className="mb-4 text-2xl font-bold">Location</h2>
         <div className="h-[400px] rounded-xl overflow-hidden">
-          <DestinationMap destination={destination} />
+          <DestinationMapClient destination={destination} />
         </div>
       </div>
     </main>
