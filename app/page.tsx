@@ -25,8 +25,8 @@ export default function Home() {
   }
 
   return (
-    <main className="container mx-auto px-4 py-8 mt-12">
-      <section className="mb-12 m-8">
+    <main className="container mx-auto px-4 py-8 ">
+      <section className="mb-12 m-8 mt-12">
         <div className="rounded-xl bg-gradient-to-r from-green-600 to-green-500 p-8 text-white">
           <div className="mx-auto max-w-2xl text-center">
             <h1 className="mb-4 text-4xl font-bold tracking-tight md:text-5xl">Discover the Beauty of Ethiopia</h1>
