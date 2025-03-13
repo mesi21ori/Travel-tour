@@ -3,7 +3,6 @@
 import dynamic from "next/dynamic"
 import type { Destination } from "@/types/destination"
 
-// Dynamically import the DestinationMap component with SSR disabled
 const DestinationMap = dynamic(() => import("@/components/destination-map"), {
   ssr: false,
   loading: () => (

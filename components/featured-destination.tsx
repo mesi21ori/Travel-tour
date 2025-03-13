@@ -10,7 +10,7 @@ interface FeaturedDestinationProps {
 
 export default function FeaturedDestination({ destination }: FeaturedDestinationProps) {
   return (
-    <div className="overflow-hidden rounded-xl border bg-white shadow-md">
+    <div className="overflow-hidden rounded-xl border bg-white shadow-md mt-12">
       <div className="grid gap-4 md:grid-cols-2">
         <div className="relative aspect-square md:aspect-auto">
           <Image

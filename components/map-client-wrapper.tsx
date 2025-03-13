@@ -4,7 +4,6 @@ import { Suspense } from "react"
 import dynamic from "next/dynamic"
 import type { Destination } from "@/types/destination"
 
-// Dynamically import the MapView component with SSR disabled
 const MapView = dynamic(() => import("@/components/map-view"), {
   ssr: false,
   loading: () => (

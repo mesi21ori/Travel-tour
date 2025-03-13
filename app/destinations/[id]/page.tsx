@@ -14,7 +14,7 @@ export default function DestinationPage({ params }: { params: { id: string } }) 
   }
 
   return (
-    <main className="container mx-auto px-4 py-8">
+    <main className="container mx-auto px-4 py-8 mt-12">
       <Link href="/destinations" className="mb-6 inline-flex items-center text-green-600 hover:underline">
         <ArrowLeft className="mr-2 h-4 w-4" />
         Back to destinations
